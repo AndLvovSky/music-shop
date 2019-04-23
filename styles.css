@@ -93,4 +93,30 @@ header {
 
 footer {
 	background-color: yellow;
+	justify-content: space-between;
+}
+
+.footer-div {
+	width: 33%;
+	float: left;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+#footerMenuUl {
+	list-style: none;
+	margin: 0px;
+}
+
+#developmentImage {
+	width: 75px;
+}
+
+#developmentLeftDiv {
+	float: left;
+}
+
+#developmentRightDiv {
+	float: left;
+	margin-left: 10px;
 }
