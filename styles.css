@@ -69,8 +69,7 @@ header {
 	justify-content: center;
 	list-style: none;
 	margin: 0px;
-	padding-top: 10px;
-	padding-bottom: 10px;
+	padding: 10px 0px 10px 0px;
 }
 
 #menuUl > li {
@@ -89,6 +88,71 @@ header {
 
 #content {
 	background-color: purple;
+}
+
+#locationUl {
+	display: flex;
+	justify-content: left;
+	list-style: none;
+	margin: 0px;
+	padding: 10px 0px 10px 0px;
+}
+
+#locationUl > li {
+	text-decoration: underline;
+	margin-left: 10px;
+}
+
+#locationUl > li:after {
+	content: '  /';
+	text-decoration: none;
+	display: inline-block;
+	white-space: pre-wrap;
+}
+
+#locationUl > li:first-child {
+	margin-left: 0px;
+}
+
+#locationUl > li:last-child {
+	text-decoration: none;
+}
+
+#locationUl > li:last-child:after {
+	content: '';
+}
+
+#leftBlock {
+	width: 20%;
+	float: left;
+}
+
+#rightBlock {
+	width: 80%;
+	float: right;
+}
+
+#leftBlockUl {
+	margin: 0px;
+	padding: 10px 0px 10px 0px;
+}
+
+#leftBlockUl > ul {
+	margin-bottom: 10px;
+}
+
+#productsDiv {
+	height: 300px;
+}
+
+#additionalInfoDiv {
+	border-top: 1px solid black;
+	padding: 10px 10px 20px 10px;
+}
+
+.additionalInfoSubDiv {
+	width: 50%;
+	float: left;
 }
 
 footer {
