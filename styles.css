@@ -1,4 +1,96 @@
 body {
-	background-color: rgb(100, 200, 100);
+	font-size: 14px;
+	line-height: 18px;
+	font-family: 'PT Sans';
 }
 
+.main-block {
+	position: relative;
+}
+
+.content {
+	width: 980px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin: auto;
+}
+
+.flexible-container {
+	display: flex;
+}
+
+header {
+	background-color: rgb(100, 100, 255);
+}
+
+#companyNameDiv {
+	width: 30%;
+	float: left;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+#logoImage {
+	width: 100px;
+}
+
+#companyNameLeftDiv {
+	width: 40%;
+	float: left;
+}
+
+#companyNameRightDiv {
+	width: 60%;
+	float: right;
+}
+
+#feedbackDiv {
+	width: 30%;
+	float: right;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+@font-face {
+	font-family: 'Raleway';
+	src: url('fonts/Raleway-Medium.ttf');
+}
+
+.telephone-number {
+	font-family: 'Raleway';
+}
+
+#menu {
+	background-color: green;
+}
+
+#menuUl {
+	display: flex;
+	justify-content: center;
+	list-style: none;
+	margin: 0px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+#menuUl > li {
+	padding-left: 10px;
+	padding-right: 10px;
+	border-right: 1px solid black;
+}
+
+#menuUl > li:last-child {
+	border-right: none;
+}
+
+#slider {
+	background-color: red;
+}
+
+#content {
+	background-color: purple;
+}
+
+footer {
+	background-color: yellow;
+}
