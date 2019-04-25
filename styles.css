@@ -227,7 +227,7 @@ header {
 	float: left;
 }
 
-#rightBlock {
+#centerBlock {
 	width: 80%;
 	float: right;
 }
@@ -242,7 +242,76 @@ header {
 }
 
 #productsDiv {
-	height: 300px;
+	height: fit-content;
+	margin-bottom: 30px;
+}
+
+.products-page {
+	width: 100%;
+	height: 100%;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(2, min-content);
+	grid-gap: 20px;
+}
+
+.product-div {
+	background-color: white;
+	height: fit-content;
+	position: relative;
+}
+
+.product-image-div {
+	background-color: green;
+	margin: 10px;
+	width: auto;
+	height: 226px; 
+	border: 1px solid black;
+	position: relative;
+}
+
+.product-image {
+	max-width: 100%;
+	max-height: 100%;
+	min-height: 100%;
+	object-fit: contain;
+}
+
+.product-image-inner-div {
+	width: fit-content;
+	height: fit-content;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	margin: auto;
+}
+
+.product-brief {
+	margin: 10px 10px 70px 10px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	line-height: 18px;
+	height: 36px;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+}
+
+.product-price {
+	position: absolute;
+	bottom: 20px;
+	left: 10px;
+}
+
+.basket-image {
+	width: 25px;
+	height: 25px;
+}
+
+.basket-div {
+	position: absolute;
+	bottom: 20px;
+	right: 10px;	
 }
 
 #additionalInfoDiv {

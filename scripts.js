@@ -1,7 +1,8 @@
 var sliderIndex = -1;
 
 function init() {
-	onSliderChange();
+	//onSliderChange();
+	document.getElementsByClassName("slider-image")[0].style.display = "block";
 	var showFeedbackButton = document.getElementById("feedbackText");
 	showFeedbackButton.onclick = () => {
 		var feedback = document.getElementById("feedback");
