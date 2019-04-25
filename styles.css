@@ -5,6 +5,12 @@ body {
 	margin: 0px;
 }
 
+#bodyWraper {
+	min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
 .main-block {
 	position: relative;
 }
@@ -349,6 +355,11 @@ header {
 .additionalInfoSubDiv {
 	width: 50%;
 	float: left;
+}
+
+#noContentDiv {
+	flex: 1;
+	background-color: purple;
 }
 
 footer {
