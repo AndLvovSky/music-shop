@@ -1,4 +1,5 @@
 var sliderIndex = -1;
+var productPageIndex = 0;
 
 function init() {
 	//onSliderChange();
@@ -16,6 +17,9 @@ function init() {
 	feedbackForm.onclick = (ev) => {
 		ev.stopPropagation();
 	};
+	onProductsPageChange();
+	var productsPageUl = document.getElementById("productsPageUl");
+	productsPageUl.onclick = onProductsPageChange;
 }
 
 function onSliderChange() {
@@ -55,4 +59,22 @@ function closeFeedback() {
 	var feedback = document.getElementById("feedback");
 	feedback.style.display = "none";
 	return false;
+}
+
+function onProductsPageChange(ev) {
+	if (ev != undefined && ev.target.tagName == "LI") {
+		var li = ev.target;
+		productPageIndex = li.innerHTML - 1;
+	}
+	var productPages = document.getElementsByClassName("products-page");
+	for (var productPage of productPages) {
+		productPage.style.display = "none";
+	}
+	var currentPage = productPages[productPageIndex];
+	currentPage.style.display = "grid";
+	var productPageLis = document.querySelectorAll("#productsPageUl > li");
+	for (var productPageLi of productPageLis) {
+		productPageLi.classList.remove("selected-page");
+	}
+	productPageLis[productPageIndex].classList.add("selected-page");
 }

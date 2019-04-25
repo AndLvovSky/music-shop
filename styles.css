@@ -249,7 +249,7 @@ header {
 .products-page {
 	width: 100%;
 	height: 100%;
-	display: grid;
+	display: none;
 	grid-template-columns: repeat(3, 1fr);
 	grid-template-rows: repeat(2, min-content);
 	grid-gap: 20px;
@@ -312,6 +312,33 @@ header {
 	position: absolute;
 	bottom: 20px;
 	right: 10px;	
+}
+
+#productsPageSelector {
+	width: 100%;
+	margin-top: 20px;
+}
+
+#productsPageUl {
+	display: flex;
+	justify-content: center;
+	list-style: none;
+	margin: 0px;
+	padding: 10px 0px 10px 0px;
+}
+
+#productsPageUl > li {
+	font-size: 25px;
+	padding: 10px;
+}
+
+#productsPageUl > li:hover {
+	background-color: rgb(100, 100, 100);
+	cursor: pointer;
+}
+
+.selected-page {
+	background-color: rgb(100, 100, 100);
 }
 
 #additionalInfoDiv {
