@@ -2,13 +2,10 @@ var sliderIndex = -1;
 var productPageIndex = 0;
 
 function init() {
-	//onSliderChange();
-	document.getElementsByClassName("slider-image")[0].style.display = "block";
+	onSliderChange();
+	//document.getElementsByClassName("slider-image")[0].style.display = "block";
 	var showFeedbackButton = document.getElementById("feedbackText");
-	showFeedbackButton.onclick = () => {
-		var feedback = document.getElementById("feedback");
-		feedback.style.display = "block";
-	};
+	showFeedbackButton.onclick = openFeedback;
 	var closeFeedbackButton = document.getElementById("closeFeedbackButton");
 	closeFeedbackButton.onclick = closeFeedback;
 	var feedback = document.getElementById("feedback");
@@ -20,6 +17,12 @@ function init() {
 	onProductsPageChange();
 	var productsPageUl = document.getElementById("productsPageUl");
 	productsPageUl.onclick = onProductsPageChange;
+	var requiredInputs = document.getElementsByClassName("no-input-alert");
+	for (var requiredInput of requiredInputs) {
+		requiredInput.onkeyup = onRequiredInputChange;
+	}
+	var feedbackForm = document.getElementById("feedbackForm");
+	feedbackForm.onsubmit = onSubmit;
 }
 
 function onSliderChange() {
@@ -53,6 +56,33 @@ function onSliderChange() {
 		target.classList.remove("unfade-image");
 		onSliderChange();
 	}, 4000);
+}
+
+function openFeedback() {
+	var feedback = document.getElementById("feedback");
+	feedback.classList.add("unfade-feedback");
+	feedback.style.display = "block";
+}
+
+function onRequiredInputChange(ev) {
+	var input = ev.target;
+	var valueSize = input.value.trim().length;
+	console.log(input.value.trim());
+	if (valueSize != 0 && input.classList.contains("no-input-alert")) {
+		input.classList.remove("no-input-alert");
+	} else if (valueSize == 0 && !input.classList.contains("no-input-alert")) {
+		input.classList.add("no-input-alert");
+	}
+}
+
+function onSubmit(ev) {
+	var feedbackForm = document.getElementById("feedbackForm");
+	var inputs = feedbackForm.querySelectorAll("input");
+	for (var input of inputs) {
+		if (input.classList.contains("no-input-alert")) {
+			ev.preventDefault();
+		}
+	}
 }
 
 function closeFeedback() {
