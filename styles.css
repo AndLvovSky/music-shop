@@ -2,6 +2,7 @@ body {
 	font-size: 14px;
 	line-height: 18px;
 	font-family: "PT Sans";
+	margin: 0px;
 }
 
 .main-block {
@@ -165,13 +166,14 @@ header {
 
 @keyframes fade {
   0% {opacity: 1;}
-  75% {opacity: 1;}
+  60% {opacity: 1;}
+  80% {opacity: 0;}
   100% {opacity: 0;}
 }
 
 .fade-image {
 	animation-name: fade;
-	animation-duration: 2s;
+	animation-duration: 2.5s;
 }
 
 @keyframes unfade {
