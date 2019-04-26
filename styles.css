@@ -4,6 +4,7 @@ body {
 	font-family: "PT Sans";
 	margin: 0px;
 	color: #281910;
+	cursor: default;
 }
 
 #bodyWraper {
@@ -67,17 +68,20 @@ header {
 }
 
 #feedbackDiv {
-	width: 30%;
+	width: fit-content;
 	float: right;
 	margin-top: 20px;
 	margin-bottom: 20px;
+	position: relative;
 }
 
 #feedbackText {
 	border-bottom: 1px dotted #281910;
 	cursor: pointer;
-	font-size: 20px;
+	font-size: 18px;
 	padding: 5px;
+	position: absolute;
+	right: 0px;
 }
 
 @font-face {
@@ -132,6 +136,20 @@ header {
 	padding: 5px;
 }
 
+button {
+	background-color: #2d4059;
+	color: #fffbc4;
+	border: none;
+}
+
+button:hover {
+	background-color: #ea5455;
+}
+
+button:focus {
+	outline: 2px solid #2d5f59;
+}
+
 #feedbackMessageInput {
 	height: 100px;
 }
@@ -140,6 +158,7 @@ header {
 	margin: 20px auto;
 	display: block;
 	cursor: pointer;
+	padding: 10px;
 }
 
 #closeFeedbackButton {
@@ -174,28 +193,37 @@ header {
 	justify-content: center;
 	list-style: none;
 	margin: 0px;
-	padding: 20px 0px 20px 0px;
 }
 
-#menuUl > li {
+#menuUl li {
 	padding-left: 10px;
 	padding-right: 10px;
-	border-right: 3px solid #fffbc4;
+	box-shadow: 2px 0 0 0 #fffbc4;
 	font-size: 25px;
 	font-weight: bolder;
 	color: #fffbc4;
 }
 
-#menuUl > li:last-child {
-	border-right: none;
+.menu-li-div {
+	padding: 20px 0px;
+}
+
+.menu-li-div:hover {
+	background-color: #f07b3f;
+	cursor: pointer;
+}
+
+#menuUl .menu-li-div:last-child li {
+	box-shadow: none;
 }
 
 #slider {
-	background-color: #f07b3f;
+	background-color: #ffd460;
 }
 
 #sliderInnerDiv {
 	width: 100%;
+	margin: 10px 0px;
 }
 
 .slider-image {
@@ -249,6 +277,7 @@ header {
 #locationUl > li {
 	text-decoration: underline;
 	margin-left: 10px;
+	cursor: pointer;
 }
 
 #locationUl > li:after {
@@ -296,6 +325,13 @@ header {
 .upper-catalog {
 	margin-bottom: 10px;
 	display: block;
+	cursor: pointer;
+	width: fit-content;
+}
+
+.sub-catalog {
+	cursor: pointer;
+	width: fit-content;
 }
 
 .selected-catalog {
@@ -331,7 +367,7 @@ header {
 }
 
 .product-image-div {
-	background-color: #fffbc4;
+	background-color: white;
 	margin: 10px;
 	width: auto;
 	height: 187.66px;
@@ -365,6 +401,7 @@ header {
 	-webkit-line-clamp: 2;
 	-webkit-box-orient: vertical;
 	font-size: 16px;
+	cursor: pointer;
 }
 
 .product-price {
@@ -373,6 +410,7 @@ header {
 	left: 20px;
 	font-size: 18px;
 	font-family: "Raleway";
+	color: #fffbc4;
 }
 
 .basket-image {
@@ -384,6 +422,7 @@ header {
 	position: absolute;
 	bottom: 20px;
 	right: 20px;
+	cursor: pointer;
 }
 
 #productsPageSelector {
@@ -427,25 +466,38 @@ header {
 
 #noContentDiv {
 	flex: 1;
-	background-color: purple;
+	background-color: #fffbc4;
 }
 
 footer {
 	background-color: #2d4059;
-	justify-content: space-between;
 	color: #fffbc4;
 }
 
 .footer-div {
-	width: 33%;
+	width: auto;
 	float: left;
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
 
+#footerInnerDiv {
+	display: flex;
+	justify-content: space-between;
+}
+
 #footerMenuUl {
 	list-style: none;
 	margin: 0px;
+}
+
+#footerMenuUl > li {
+	margin-bottom: 10px;
+}
+
+.footer-link {
+	text-decoration: underline;
+	cursor: pointer;
 }
 
 #developmentImage {
