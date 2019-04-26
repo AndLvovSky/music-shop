@@ -1,5 +1,6 @@
 var sliderIndex = -1;
 var productPageIndex = 0;
+var formHeight = 507;
 
 function init() {
 	onSliderChange();
@@ -23,6 +24,7 @@ function init() {
 	}
 	var feedbackForm = document.getElementById("feedbackForm");
 	feedbackForm.onsubmit = onSubmit;
+	window.addEventListener('resize', onWindowResize);
 }
 
 function onSliderChange() {
@@ -62,12 +64,12 @@ function openFeedback() {
 	var feedback = document.getElementById("feedback");
 	feedback.classList.add("unfade-feedback");
 	feedback.style.display = "block";
+	onWindowResize();
 }
 
 function onRequiredInputChange(ev) {
 	var input = ev.target;
 	var valueSize = input.value.trim().length;
-	console.log(input.value.trim());
 	if (valueSize != 0 && input.classList.contains("no-input-alert")) {
 		input.classList.remove("no-input-alert");
 	} else if (valueSize == 0 && !input.classList.contains("no-input-alert")) {
@@ -88,6 +90,8 @@ function onSubmit(ev) {
 function closeFeedback() {
 	var feedback = document.getElementById("feedback");
 	feedback.style.display = "none";
+	var feedbackForm = document.getElementById("feedbackForm");
+	feedbackForm.style.display = "table";
 	return false;
 }
 
@@ -107,4 +111,17 @@ function onProductsPageChange(ev) {
 		productPageLi.classList.remove("selected-page");
 	}
 	productPageLis[productPageIndex].classList.add("selected-page");
+}
+
+function onWindowResize() {
+	var feedbackForm = document.getElementById("feedbackForm");
+	var windowHeight = window.innerHeight;
+	if (windowHeight < formHeight) {
+		if (feedbackForm.style.display == "table") {
+			feedbackForm.style.display = "none";
+			setTimeout(() => {feedbackForm.style.display = "inline-block"}, 50);
+		}
+	} else {
+		feedbackForm.style.display = "table";
+	}
 }
