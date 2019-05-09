@@ -239,6 +239,7 @@ button:focus {
 
 #sliderInnerDiv {
 	width: 100%;
+	height: 200px;
 	margin: 10px 0px;
 }
 
@@ -247,34 +248,8 @@ button:focus {
 	height: 200px;
 	margin: auto;
 	display: none;
+	opacity: 0;
 	border-radius: 40px;
-}
-
-@keyframes fade {
-  0% {opacity: 1;}
-  60% {opacity: 1;}
-  80% {opacity: 0;}
-  100% {opacity: 0;}
-}
-
-.fade-image {
-	animation-name: fade;
-	animation-duration: 2.5s;
-}
-
-@keyframes unfade {
-  from {opacity: 0;}
-  to {opacity: 1;}
-}
-
-.unfade-image {
-	animation-name: unfade;
-	animation-duration: 2s;
-}
-
-.unfade-feedback {
-	animation-name: unfade;
-	animation-duration: 1s;
 }
 
 #content {
