@@ -67,8 +67,8 @@ function onRequiredInputChange(ev) {
 }
 
 function onSubmit(ev) {
-	$("#feedbackForm input").each(function(i, input) {
-		if (input.hasClass("no-input-alert")) {
+	$("#feedbackForm input").each(function() {
+		if ($(this).hasClass("no-input-alert")) {
 			ev.preventDefault();
 		}
 	});
@@ -87,9 +87,9 @@ function onProductsPageChange(ev) {
 	}
 	$(".products-page").hide();
 	$(".products-page").eq(productPageIndex)
-		.css("display", "grid")
-		.addClass("selected-page");
-	$("#productsPageUl > li").removeClass("selected-page");
+		.css("display", "grid");
+	$("#productsPageUl > li").removeClass("selected-page")
+		.eq(productPageIndex).addClass("selected-page");
 }
 
 function onWindowResize() {
