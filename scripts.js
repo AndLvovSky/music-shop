@@ -2,30 +2,21 @@ var sliderIndex = -1;
 var productPageIndex = 0;
 var formHeight = 507;
 
-function init() {
+$(document).ready(function() {
 	onSliderChange();
 	//document.getElementsByClassName("slider-image")[0].style.display = "block";
-	var showFeedbackButton = document.getElementById("feedbackText");
-	showFeedbackButton.onclick = openFeedback;
-	var closeFeedbackButton = document.getElementById("closeFeedbackButton");
-	closeFeedbackButton.onclick = closeFeedback;
-	var feedback = document.getElementById("feedback");
-	feedback.onclick = closeFeedback;
-	var feedbackForm = document.getElementById("feedbackForm");
-	feedbackForm.onclick = (ev) => {
+	$("#feedbackText").click(openFeedback);
+	$("#closeFeedbackButton").click(closeFeedback);
+	$("#feedback").click(closeFeedback);
+	$("#feedbackForm").click(function(ev) {
 		ev.stopPropagation();
-	};
+	});
 	onProductsPageChange();
-	var productsPageUl = document.getElementById("productsPageUl");
-	productsPageUl.onclick = onProductsPageChange;
-	var requiredInputs = document.getElementsByClassName("no-input-alert");
-	for (var requiredInput of requiredInputs) {
-		requiredInput.onkeyup = onRequiredInputChange;
-	}
-	var feedbackForm = document.getElementById("feedbackForm");
-	feedbackForm.onsubmit = onSubmit;
-	window.addEventListener('resize', onWindowResize);
-}
+	$("#productsPageUl").click(onProductsPageChange);
+	$(".no-input-alert").keyup(onRequiredInputChange);
+	$("#feedbackForm").submit(onSubmit);
+	$(window).resize(onWindowResize);
+});
 
 function onSliderChange() {
 	var sliderImages = document.getElementsByClassName("slider-image");
@@ -61,9 +52,7 @@ function onSliderChange() {
 }
 
 function openFeedback() {
-	var feedback = document.getElementById("feedback");
-	feedback.classList.add("unfade-feedback");
-	feedback.style.display = "block";
+	$("#feedback").addClass("unfade-feedback").css("display", "block");
 	onWindowResize();
 }
 
@@ -78,20 +67,16 @@ function onRequiredInputChange(ev) {
 }
 
 function onSubmit(ev) {
-	var feedbackForm = document.getElementById("feedbackForm");
-	var inputs = feedbackForm.querySelectorAll("input");
-	for (var input of inputs) {
-		if (input.classList.contains("no-input-alert")) {
+	$("#feedbackForm input").each(function(i, input) {
+		if (input.hasClass("no-input-alert")) {
 			ev.preventDefault();
 		}
-	}
+	});
 }
 
 function closeFeedback() {
-	var feedback = document.getElementById("feedback");
-	feedback.style.display = "none";
-	var feedbackForm = document.getElementById("feedbackForm");
-	feedbackForm.style.display = "table";
+	$("#feedback").hide();
+	$("feedbackForm").css("display", "table");
 	return false;
 }
 
@@ -100,17 +85,11 @@ function onProductsPageChange(ev) {
 		var li = ev.target;
 		productPageIndex = li.innerHTML - 1;
 	}
-	var productPages = document.getElementsByClassName("products-page");
-	for (var productPage of productPages) {
-		productPage.style.display = "none";
-	}
-	var currentPage = productPages[productPageIndex];
-	currentPage.style.display = "grid";
-	var productPageLis = document.querySelectorAll("#productsPageUl > li");
-	for (var productPageLi of productPageLis) {
-		productPageLi.classList.remove("selected-page");
-	}
-	productPageLis[productPageIndex].classList.add("selected-page");
+	$(".products-page").hide();
+	$(".products-page").eq(productPageIndex)
+		.css("display", "grid")
+		.addClass("selected-page");
+	$("#productsPageUl > li").removeClass("selected-page");
 }
 
 function onWindowResize() {
