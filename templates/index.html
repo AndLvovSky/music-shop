@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block products %}
+	{% set productsInPage = 6 %}
+	{% set pagesNumber = products|length // productsInPage +
+		(products|length % productsInPage ? 1 : 0) %}
+
+	{% for i in 0..pagesNumber - 1 %}
+		<div class="products-page">
+			{% for j in 0..min(productsInPage, products|length - i * productsInPage) - 1 %}
+				{{ include("product.html", {"product" : products[i * productsInPage + j]}) }}
+			{% endfor %}
+		</div>
+	{% endfor %}
+
+	<div id="productsPageSelector">
+		<ul id="productsPageUl">
+			{% for i in 1..pagesNumber %}
+				<li class="products-page-li">{{i}}</li>
+			{% endfor %}
+		</ul>
+	</div>
+{% endblock %}
