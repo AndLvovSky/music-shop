@@ -112,7 +112,7 @@ body {
 	padding: 5px;
 }
 
-button {
+/*button {
 	background-color: #2d4059;
 	color: #fffbc4;
 	border: none;
@@ -125,6 +125,7 @@ button:hover {
 button:focus {
 	outline: 2px solid #2d5f59;
 }
+*/
 
 #feedbackMessageInput {
 	height: 100px;
@@ -157,6 +158,21 @@ button:focus {
 
 ::placeholder {
   color: #f07b3f;
+}
+
+.navbar-dark {
+	background-color: #ea5455;
+	color: #fffbc4;
+}
+
+.nav-link {
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+
+.nav-link:hover {
+	color: #fffbc4;
+	background-color: #f07b3f;
 }
 
 #menu {
