@@ -24,7 +24,7 @@ function onSliderChange() {
 		$(".slider-image").eq(0)
 			.css("display", "block")
 			.animate({opacity: 1}, 2000, () => {
-				onSliderChange();
+				//onSliderChange();
 			});
 		return;
 	}

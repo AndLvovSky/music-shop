@@ -3,6 +3,7 @@ body {
 	color: #281910;
 	cursor: default;
 	user-select: none;
+	min-height: 100vh;
 }
 
 #bodyWraper {
@@ -435,16 +436,12 @@ button:focus {
 	background-color: #fffbc4;
 }
 
-footer {
+.footer {
 	background-color: #2d4059;
 	color: #fffbc4;
 }
 
 .footer-div {
-	width: auto;
-	float: left;
-	margin-top: 20px;
-	margin-bottom: 20px;
 }
 
 #footerInnerDiv {
@@ -471,10 +468,7 @@ footer {
 }
 
 #developmentLeftDiv {
-	float: left;
 }
 
 #developmentRightDiv {
-	float: left;
-	margin-left: 10px;
 }
