@@ -43,7 +43,7 @@ function onSliderChange() {
 }
 
 function openFeedback() {
-	$("#feedback").addClass("unfade-feedback").css("display", "block");
+	$("#feedback").addClass("unfade").css("display", "block");
 	onWindowResize();
 }
 
