@@ -1,11 +1,7 @@
 body {
-	font-size: 14px;
-	line-height: 18px;
 	font-family: "PT Sans";
-	margin: 0px;
 	color: #281910;
 	cursor: default;
-	height: 100vh;
 	user-select: none;
 }
 
@@ -19,71 +15,28 @@ body {
 	position: relative;
 }
 
-.content {
-	width: 980px;
-	padding-left: 10px;
-	padding-right: 10px;
-	margin: auto;
-}
-
 .flexible-container {
 	display: flex;
 }
 
-header {
+.jumbotron {
 	background-color: #ffd460;
-}
-
-#companyNameDiv {
-	width: 350px;
-	float: left;
-	margin-top: 20px;
-	margin-bottom: 20px;
 }
 
 #logoImage {
 	width: 100px;
-	height: auto;
-}
-
-#companyNameLeftDiv {
-	width: auto;
-	float: left;
-}
-
-#companyNameRightDiv {
-	width: auto;
-	float: left;
-	margin-left: 20px;
-}
-
-#companyNameText {
-	font-size: 30px;
-	font-weight: bold;
-	margin-top: 10px;
 }
 
 #companyNameSubText {
-	font-size: 17px;
 	font-style: italic;
-	margin-top: 30px;
-}
-
-#feedbackDiv {
-	width: fit-content;
-	float: right;
-	margin-top: 20px;
-	margin-bottom: 20px;
-	position: relative;
+	margin-top: 1.75rem;
 }
 
 #feedbackText {
 	border-bottom: 1px dotted #281910;
 	cursor: pointer;
-	font-size: 18px;
-	padding: 5px;
-	position: absolute;
-	right: 0px;
+	font-size: 1.125rem;
+	margin-top: 1rem;
 }
 
 @font-face {
@@ -93,8 +46,7 @@ header {
 
 .telephone-number {
 	font-family: "Raleway";
-	font-size: 25px;
-	margin-bottom: 10px;
+	font-size: 1.5rem;
 }
 
 @keyframes unfade {
