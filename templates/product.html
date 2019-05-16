@@ -1,14 +1,12 @@
 <div class="card product-div">
 	<image class="card-img-top product-image" src="{{"images/products/" ~ product.imageName}}">
 	<div class="card-body">
-		<div class="card-text mb-3">
+		<div class="card-text mb-3 product-brief">
 			{{product.brief}}
 		</div>
-		<div class="d-flex justify-content-between">
-			<div class="product-price">{{product.price}} грн</div>
-			<div class="btn">
-				<image class="basket-image" src="images/basket.png">
-			</div>
-		</div>
+		<div class="float-left product-price">{{product.price}} грн</div>
+		<button class="btn float-right" style="background-color: transparent;">
+			<image class="basket-image" src="images/basket.png">
+		</button>
 	</div>
 </div>

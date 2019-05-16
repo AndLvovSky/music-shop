@@ -1,20 +1,12 @@
 var sliderIndex = -1;
 var productPageIndex = 0;
-var formHeight = 507;
 
 $(document).ready(function() {
 	onSliderChange();
-	$("#feedbackText").click(openFeedback);
-	$("#closeFeedbackButton").click(closeFeedback);
-	$("#feedback").click(closeFeedback);
-	$("#feedbackForm").click(function(ev) {
-		ev.stopPropagation();
-	});
 	onProductsPageChange();
 	$("#productsPageUl").click(onProductsPageChange);
 	$(".no-input-alert").keyup(onRequiredInputChange);
 	$("#feedbackForm").submit(onSubmit);
-	$(window).resize(onWindowResize);
 });
 
 function onSliderChange() {
@@ -42,11 +34,6 @@ function onSliderChange() {
 	}, 1500);
 }
 
-function openFeedback() {
-	$("#feedback").addClass("unfade").css("display", "block");
-	onWindowResize();
-}
-
 function onRequiredInputChange(ev) {
 	var input = $(ev.target);
 	var valueSize = input.val().trim().length;
@@ -65,12 +52,6 @@ function onSubmit(ev) {
 	});
 }
 
-function closeFeedback() {
-	$("#feedback").hide();
-	$("feedbackForm").css("display", "table");
-	return false;
-}
-
 function onProductsPageChange(ev) {
 	if (ev != undefined && ev.target.tagName == "LI") {
 		var li = ev.target;
@@ -81,17 +62,4 @@ function onProductsPageChange(ev) {
 		.css("display", "grid");
 	$("#productsPageUl > li").removeClass("selected-page")
 		.eq(productPageIndex).addClass("selected-page");
-}
-
-function onWindowResize() {
-	var feedbackForm = $("#feedbackForm");
-	var windowHeight = window.innerHeight;
-	if (windowHeight < formHeight) {
-		if (feedbackForm.css("display") == "table") {
-			feedbackForm.css("display", "none");
-			setTimeout(() => {feedbackForm.css("display", "inline-block")}, 50);
-		}
-	} else {
-		feedbackForm.css("display", "table");
-	}
 }
