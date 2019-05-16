@@ -135,8 +135,7 @@ body {
 	width: 100%;
 	height: 100%;
 	display: none;
-	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: repeat(2, 1fr);
+	grid-template-columns: repeat(1, 1fr);
 	grid-gap: 1.25rem;
 }
 
@@ -216,4 +215,22 @@ body {
 
 #developmentImage {
 	width: 5rem;
+}
+
+@media (min-width: 576px) {
+	.products-page {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (min-width: 576px) {
+	.products-page {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (min-width: 992px) {
+	.products-page {
+		grid-template-columns: repeat(3, 1fr);
+	}
 }
