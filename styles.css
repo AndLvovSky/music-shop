@@ -4,6 +4,7 @@ body {
 	cursor: default;
 	user-select: none;
 	min-height: 100vh;
+	background-color: #fffff0;
 }
 
 #bodyWraper {
@@ -267,38 +268,32 @@ button:focus {
 }
 
 #leftBlock {
-	width: 25%;
-	float: left;
-	margin-right: auto;
 }
 
 #centerBlock {
-	width: 75%;
-	float: right;
-	margin-left: auto;
 }
 
 #leftBlockUl {
-	margin: 0px;
-	padding: 10px 0px 10px 0px;
-	font-size: 18px;
+	font-size: 1.125rem;
 	font-weight: bolder;
 }
 
 #leftBlockUl > ul {
-	margin-bottom: 10px;
 }
 
 .upper-catalog {
-	margin-bottom: 10px;
-	display: block;
-	cursor: pointer;
-	width: fit-content;
+}
+
+.list-group {
+	list-style: none;
+}
+
+.list-group-item {
+	background-color: transparent;
 }
 
 .sub-catalog {
-	cursor: pointer;
-	width: fit-content;
+
 }
 
 .selected-catalog {
@@ -306,9 +301,6 @@ button:focus {
 }
 
 #leftBlockUl li {
-	font-size: 16px;
-	list-style-type: disc;
-	margin-bottom: 5px;
 }
 
 #productsDiv {
@@ -327,26 +319,12 @@ button:focus {
 
 .product-div {
 	background-color: #f07b3f;
-	height: fit-content;
-	position: relative;
-	padding: 10px;
-	border-radius: 10px;
-}
-
-.product-image-div {
-	background-color: white;
-	margin: 10px;
-	width: auto;
-	height: 187.66px;
-	border: 3px solid #2d4059;
-	position: relative;
 }
 
 .product-image {
-	max-width: 100%;
-	max-height: 100%;
-	min-height: 100%;
+	height: 187.66px;
 	object-fit: contain;
+	background-color: white;
 }
 
 .product-image-inner-div {
@@ -359,7 +337,6 @@ button:focus {
 }
 
 .product-brief {
-	margin: 10px 10px 70px 10px;
 	overflow: hidden;
 	text-overflow: ellipsis;
 	display: -webkit-box;
@@ -372,10 +349,7 @@ button:focus {
 }
 
 .product-price {
-	position: absolute;
-	bottom: 20px;
-	left: 20px;
-	font-size: 18px;
+	font-size: 1.125rem;
 	font-family: "Raleway";
 	color: #fffbc4;
 }
@@ -423,12 +397,9 @@ button:focus {
 
 #additionalInfoDiv {
 	border-top: 2px solid #281910;
-	padding: 10px 10px 40px 10px;
 }
 
 .additionalInfoSubDiv {
-	width: 50%;
-	float: left;
 }
 
 #noContentDiv {
@@ -455,12 +426,12 @@ button:focus {
 }
 
 #footerMenuUl > li {
-	margin-bottom: 10px;
 }
 
 .footer-link {
 	text-decoration: underline;
 	cursor: pointer;
+	background-color: transparent;
 }
 
 #developmentImage {

@@ -1,14 +1,14 @@
-<div class="product-div">
-	<div class="product-image-div">
-		<div class="product-image-inner-div">
-			<image class="product-image" src="{{"images/products/" ~ product.imageName}}">
+<div class="card product-div">
+	<image class="card-img-top product-image" src="{{"images/products/" ~ product.imageName}}">
+	<div class="card-body">
+		<div class="card-text mb-3">
+			{{product.brief}}
 		</div>
-	</div>
-	<div class="product-brief">
-		{{product.brief}}
-	</div>
-	<div class="product-price">{{product.price}} грн</div>
-	<div class="basket-div">
-		<image class="basket-image" src="images/basket.png">
+		<div class="d-flex justify-content-between">
+			<div class="product-price">{{product.price}} грн</div>
+			<div class="btn">
+				<image class="basket-image" src="images/basket.png">
+			</div>
+		</div>
 	</div>
 </div>
