@@ -44,6 +44,7 @@ function init() {
 	var feedbackForm = document.getElementById("feedbackForm");
 	feedbackForm.onsubmit = onSubmit;
 	window.addEventListener('resize', onWindowResize);
+	setMenuListeners();
 }
 
 function onSliderChange() {
@@ -142,6 +143,15 @@ function onWindowResize() {
 		}
 	} else {
 		feedbackForm.style.display = "table";
+	}
+}
+
+function setMenuListeners() {
+	var menuItems = document.getElementsByClassName("menu-li-div");
+	for (var menuItem of menuItems) {
+		menuItem.addEventListener("click", function(ev) {
+			this.firstChild.firstChild.click();
+		});
 	}
 }
 

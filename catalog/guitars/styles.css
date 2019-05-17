@@ -217,18 +217,26 @@ button:focus {
 	box-shadow: 2px 0 0 0 #fffbc4;
 	font-size: 25px;
 	font-weight: bolder;
-	color: #fffbc4;
 	text-align: center;
 	line-height: 32px;
+}
+
+#menuUl a {
+	color: #fffbc4;
 }
 
 .menu-li-div {
 	padding: 20px 0px;
 }
 
-.menu-li-div:hover {
+.menu-li-div:hover, .menu-li-div.active {
 	background-color: #f07b3f;
 	cursor: pointer;
+}
+
+.menu-li-div.disabled {
+	padding: 20px 0px;
+	cursor: default;
 }
 
 #menuUl .menu-li-div:last-child li {
@@ -296,7 +304,6 @@ button:focus {
 #locationUl > li {
 	text-decoration: underline;
 	margin-left: 10px;
-	cursor: pointer;
 }
 
 #locationUl > li:after {
@@ -318,17 +325,21 @@ button:focus {
 	content: '';
 }
 
-#leftBlock {
-	width: 25%;
-	min-width: 150px;
-	float: left;
-	margin-right: auto;
-}
-
 #centerBlock {
 	width: 73%;
 	float: right;
 	margin-left: auto;
+}
+
+#leftBlock {
+	width: 100%;
+	float: none;
+}
+
+#centerBlock {
+	position: relative;
+	width: 100%;
+	float: none;
 }
 
 #leftBlockUl {
@@ -341,6 +352,10 @@ button:focus {
 
 #leftBlockUl > ul {
 	margin-bottom: 10px;
+}
+
+#leftBlockUl span.active {
+	color: #f07b3f;
 }
 
 .upper-catalog {
@@ -518,9 +533,13 @@ footer {
 	margin-bottom: 10px;
 }
 
-.footer-link {
-	text-decoration: underline;
+.footer-link a {
+	text-decoration: underline !important;
 	cursor: pointer;
+}
+
+.footer-link a.active {
+	text-decoration: none !important;
 }
 
 #developmentImage {
@@ -539,6 +558,25 @@ footer {
 @media (max-width: 768px) {
 	.products-page {
 		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (min-width: 768px) {
+	#leftBlock {
+		width: 25%;
+		min-width: 150px;
+		float: left;
+		margin-right: auto;
+	}
+
+	#centerBlock {
+		width: 73%;
+		float: right;
+		margin-left: auto;
+	}
+
+	#innerContent {
+		flex-direction: row !important;
 	}
 }
 
@@ -588,4 +626,67 @@ footer {
 	.feedbackTextInput {
 		width: 200px;
 	}
+
+	#bigLogo {
+		float: none !important;
+		margin: 20px auto !important;
+		display: block;
+	}
+
+	#bigCompanyName {
+		display: block;
+	}
+}
+
+.main-paragraph {
+	font-size: 20px;
+	line-height: 30px;
+	font-family: "Maiden Orange";
+	text-indent: 50px;
+	text-align: justify;
+}
+
+.emoji {
+	font-size: 1rem;
+}
+
+#bigLogo {
+	float: left;
+	margin: 20px 20px 20px 0px;
+	box-shadow: 10px 10px 8px #888888;
+	border-radius: 20px;
+}
+
+#innerContent {
+	flex-direction: column-reverse;
+}
+
+h1 {
+	font-size: 30px;
+	line-height: 40px;
+	font-family: "Raleway";
+}
+
+#bigCompanyName {
+	font-style: italic;
+	color: #f07b3f;
+}
+
+.red {
+	color: #ea5455; 
+}
+
+.disabled {
+	color: #bbbbbb !important;
+	cursor: default !important;
+}
+
+.footer-link.disabled a {
+	cursor: default;
+}
+
+a:hover, a:visited, a:link, a:active
+{
+    text-decoration: none;
+    color: inherit;
 }

@@ -1,10 +1,11 @@
 <html>
 	<head>
 		<title> Music shop </title>
-		<link rel="stylesheet" href="styles.css">
 		<link rel="icon" href="../../images/logo_small.png" type="image/icon type">
+		<link rel="stylesheet" href="styles.css">
 		<script type="text/javascript" src="scripts.js"></script>
 		<link href='https://fonts.googleapis.com/css?family=PT Sans' rel='stylesheet'>
+		<link href="https://fonts.googleapis.com/css?family=Maiden+Orange&display=swap" rel="stylesheet">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta charset="UTF-8">
 	</head>
@@ -30,11 +31,11 @@
 			<div class="flexible-container">
 			<div class="content">
 				<ul id="menuUl" class="content">
-					<div class="menu-li-div"><li>Головна</li></div>
-					<div class="menu-li-div"><li>Каталог</li></div>
-					<div class="menu-li-div"><li>Доставка і оплата</li></div>
-					<div class="menu-li-div"><li>Прайс-лист</li></div>
-					<div class="menu-li-div"><li>Контакти</li></div>
+					<div class="menu-li-div"><li><a href="../../index.html">Головна</a></li></div>
+					<div class="menu-li-div active"><li><a href="index.html">Каталог</a></li></div>
+					<div class="menu-li-div disabled"><li><a class="disabled">Доставка і оплата</a></li></div>
+					<div class="menu-li-div disabled"><li><a class="disabled">Прайс-лист</li></a></div>
+					<div class="menu-li-div disabled"><li><a class="disabled">Контакти</li></a></div>
 				</ul>
 			</div>
 			</div>
@@ -56,62 +57,60 @@
 					<li>Каталог</li>
 					<li>Гітари</li>
 				</ul>
-				<div class="flexible-container">
-					<div id="leftBlock">
-						<ul id="leftBlockUl">
-							<span class="upper-catalog selected-catalog">Гітари</span>
-							<ul>
-								<li><span class="sub-catalog">Акустичні</span></li>
-								<li><span class="sub-catalog">Класичні</span></li>
-								<li><span class="sub-catalog">Електро</span></li>
-								<li><span class="sub-catalog">Бас</span></li>
-							</ul>
-							<span class="upper-catalog">Барабанна установка</span>
-							<ul>
-								<li><span class="sub-catalog">Великі барабани</span></li>
-								<li><span class="sub-catalog">Робочі</span></li>
-								<li><span class="sub-catalog">Томи</span></li>
-								<li><span class="sub-catalog">Тарілки</span></li>
-								<li><span class="sub-catalog">Палички</span></li>
-							</ul>
-							<span class="upper-catalog">Клавіші</span>
-							<ul>
-								<li><span class="sub-catalog">Класичне фортепіано</span></li>
-								<li><span class="sub-catalog">Синтезатор</span></li>
-							</ul>
-							<span class="upper-catalog">Мікрофони</span>
-							<ul>
-								<li><span class="sub-catalog">Концертні</span></li>
-								<li><span class="sub-catalog">Студійні</span></li>
-							</ul>
-							<span class="upper-catalog">Аксесуари</span>
-							<ul>
-								<li><span class="sub-catalog">Струни</span></li>
-								<li><span class="sub-catalog">Медіатори</span></li>
-								<li><span class="sub-catalog">Каподастри</span></li>
-								<li><span class="sub-catalog">Палички</span></li>
-								<li><span class="sub-catalog">Пюпітри</span></li>
-							</ul>
+				<div id="leftBlock">
+					<ul id="leftBlockUl">
+						<span class="active upper-catalog"><a href="index.html">Гітари</a></span>
+						<ul>
+							<li><span class="disabled sub-catalog"><a>Акустичні</a></span></li>
+							<li><span class="disabled sub-catalog"><a>Класичні</a></span></li>
+							<li><span class="disabled sub-catalog"><a>Електро</a></span></li>
+							<li><span class="disabled sub-catalog"><a>Бас</a></span></li>
 						</ul>
+						<span class="disabled upper-catalog"><a>Барабанна установка</a></span>
+						<ul>
+							<li><span class="disabled sub-catalog"><a>Великі барабани</a></span></li>
+							<li><span class="disabled sub-catalog"><a>Робочі</a></span></li>
+							<li><span class="disabled sub-catalog"><a>Томи</a></span></li>
+							<li><span class="disabled sub-catalog"><a>Тарілки</a></span></li>
+							<li><span class="disabled sub-catalog"><a>Палички</a></span></li>
+						</ul>
+						<span class="disabled upper-catalog"><a>Клавіші</a></span>
+						<ul>
+							<li><span class="disabled sub-catalog"><a>Класичне фортепіано</a></span></li>
+							<li><span class="disabled sub-catalog"><a>Синтезатор</a></span></li>
+						</ul>
+						<span class="disabled upper-catalog"><a>Мікрофони</a></span>
+						<ul>
+							<li><span class="disabled sub-catalog"><a>Концертні</a></span></li>
+							<li><span class="disabled sub-catalog"><a>Студійні</a></span></li>
+						</ul>
+						<span class="disabled upper-catalog"><a>Аксесуари</a></span>
+						<ul>
+							<li><span class="disabled sub-catalog"><a>Струни</a></span></li>
+							<li><span class="disabled sub-catalog"><a>Медіатори</a></span></li>
+							<li><span class="disabled sub-catalog"><a>Каподастри</a></span></li>
+							<li><span class="disabled sub-catalog"><a>Палички</a></span></li>
+							<li><span class="disabled sub-catalog"><a>Пюпітри</a></span></li>
+						</ul>
+					</ul>
+				</div>
+				<div id="centerBlock">
+					<div id="productsDiv">
 					</div>
-					<div id="centerBlock">
-						<div id="productsDiv">
+					<div id="additionalInfoDiv">
+						<div class="additionalInfoSubDiv">
+							Компанія "Music Pro" стала флагманом в сфері продажу музичних інструментів
+							уже через 2 роки після свого створення у 2016-му році. Цього вдалося досягти,
+							завдяки чудовому колективу музикантів, досвід яких подекуди сягає п'ятнадцяти років.
 						</div>
-						<div id="additionalInfoDiv">
-							<div class="additionalInfoSubDiv">
-								Компанія "Music Pro" стала флагманом в сфері продажу музичних інструментів
-								уже через 2 роки після свого створення у 2016-му році. Цього вдалося досягти,
-								завдяки чудовому колективу музикантів, досвід яких подекуди сягає п'ятнадцяти років.
-							</div>
-							<div class="additionalInfoSubDiv">
-								Наш інтернет-магазин унікальний тим, що ми пропонуємо виключно товари, перевірені
-								професіоналами. На разі ми займаємося продажем різноманітних гітар, барабанів та
-								клавішних інструментів та пропонуємо широкий вибір аксесуарів для них.
-								Висловлюємо велику подяку компанії "Web Developers", яка доклала зусиль для того,
-								щоб інтерфейс для взаємодії з нашими клієнтами був зручним. Будемо дуже вдячні,
-								якщо Ви станете нашим клієнтом. Не варто забувати, що постійним клієнтам
-								надається чимала скидка :)
-							</div>
+						<div class="additionalInfoSubDiv">
+							Наш інтернет-магазин унікальний тим, що ми пропонуємо виключно товари, перевірені
+							професіоналами. На разі ми займаємося продажем різноманітних гітар, барабанів та
+							клавішних інструментів та пропонуємо широкий вибір аксесуарів для них.
+							Висловлюємо велику подяку компанії "Web Developers", яка доклала зусиль для того,
+							щоб інтерфейс для взаємодії з нашими клієнтами був зручним. Будемо дуже вдячні,
+							якщо Ви станете нашим клієнтом. Не варто забувати, що постійним клієнтам
+							надається чимала скидка :)
 						</div>
 					</div>
 				</div>
@@ -127,17 +126,17 @@
 				</div>
 				<div class="footer-div">
 					<ul id="footerMenuUl">
-						<li><span class="footer-link">Головна</span></li>
-						<li><span class="footer-link">Каталог</span></li>
-						<li><span class="footer-link">Доставка і оплата</span></li>
-						<li><span class="footer-link">Прайс-лист</span></li>
-						<li><span class="footer-link">Контакти</span></li>
+						<li><span class="footer-link"><a href="../../index.html">Головна</a></span></li>
+						<li><span class="footer-link"><a href="index.html" class="active">Каталог</span></a></li>
+						<li><span class="footer-link"><a class="disabled">Доставка і оплата</a></span></li>
+						<li><span class="footer-link"><a class="disabled">Прайс-лист</a></span></li>
+						<li><span class="footer-link"><a class="disabled">Контакти</a></span></li>
 					</ul>
 				</div>
 				<div class="footer-div">
 					<div id="developmentLeftDiv"><image id="developmentImage" src="../../images/development.png"/></div>
 					<div id="developmentRightDiv">
-						<span class="footer-link">Розробка сайту</span> -<br>
+						<span class="disabled footer-link"><a>Розробка сайту</a></span> -<br>
 						<span>компанія "Web Developers"</span>
 					</div>
 				</div>
