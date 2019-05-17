@@ -166,7 +166,7 @@ button:focus {
 }
 
 #feedbackMessageInput {
-	height: 100px;
+	resize: none;
 }
 
 #sendFeedbackButton {
@@ -535,6 +535,10 @@ h1 {
 	color: #ea5455; 
 }
 
+.orange {
+	color: #f07b3f;
+}
+
 .disabled {
 	color: #bbbbbb !important;
 	cursor: default !important;
@@ -548,4 +552,9 @@ a:hover, a:visited, a:link, a:active
 {
     text-decoration: none;
     color: inherit;
+}
+
+.underlined {
+	border-bottom: 1px solid #bbbbbb;
+	padding-bottom: 10px;  
 }
