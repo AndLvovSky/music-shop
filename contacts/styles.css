@@ -86,6 +86,13 @@ header {
 	float: right;
 }
 
+#feedbackTextCopy {
+	cursor: pointer;
+	font-size: 20px;
+	padding: 10px;
+	margin-bottom: 20px;
+}
+
 @font-face {
 	font-family: "Raleway";
 	src: url("../fonts/Raleway-Medium.ttf");
@@ -693,4 +700,23 @@ a:hover, a:visited, a:link, a:active
 {
     text-decoration: none;
     color: inherit;
+}
+
+.big-text {
+	font-size: 20px;
+}
+
+h2 {
+	font-size: 25px;
+}
+
+.underlined {
+	border-bottom: 1px solid #bbbbbb;
+	padding-bottom: 10px;  
+}
+
+.accent-text {
+	font-size: 20px;
+	line-height: 30px;
+	font-family: "Maiden Orange";
 }

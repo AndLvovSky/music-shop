@@ -6,6 +6,8 @@ function init() {
 	onSliderChange();
 	var showFeedbackButton = document.getElementById("feedbackText");
 	showFeedbackButton.onclick = openFeedback;
+	var showFeedbackButton = document.getElementById("feedbackTextCopy");
+	showFeedbackButton.onclick = openFeedback;
 	var closeFeedbackButton = document.getElementById("closeFeedbackButton");
 	closeFeedbackButton.onclick = closeFeedback;
 	var feedback = document.getElementById("feedback");
