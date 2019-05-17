@@ -1,8 +1,7 @@
 var sliderIndex = -1;
-var productPageIndex = 0;
 var formHeight = 507;
 
-function init() {
+function initBase() {
 	onSliderChange();
 	var showFeedbackButton = document.getElementById("feedbackText");
 	showFeedbackButton.onclick = openFeedback;
