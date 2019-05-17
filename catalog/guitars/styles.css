@@ -88,7 +88,7 @@ header {
 
 @font-face {
 	font-family: "Raleway";
-	src: url("fonts/Raleway-Medium.ttf");
+	src: url("../../fonts/Raleway-Medium.ttf");
 }
 
 .telephone-number {
@@ -318,21 +318,17 @@ button:focus {
 	content: '';
 }
 
+#leftBlock {
+	width: 25%;
+	min-width: 150px;
+	float: left;
+	margin-right: auto;
+}
+
 #centerBlock {
 	width: 73%;
 	float: right;
 	margin-left: auto;
-}
-
-#leftBlock {
-	width: 100%;
-	float: none;
-}
-
-#centerBlock {
-	position: relative;
-	width: 100%;
-	float: none;
 }
 
 #leftBlockUl {
@@ -546,25 +542,6 @@ footer {
 	}
 }
 
-@media (min-width: 768px) {
-	#leftBlock {
-		width: 25%;
-		min-width: 150px;
-		float: left;
-		margin-right: auto;
-	}
-
-	#centerBlock {
-		width: 73%;
-		float: right;
-		margin-left: auto;
-	}
-
-	#innerContent {
-		flex-direction: row !important;
-	}
-}
-
 @media (max-width: 650px) {
 	#menuUl {
 		display: block;
@@ -611,52 +588,4 @@ footer {
 	.feedbackTextInput {
 		width: 200px;
 	}
-
-	#bigLogo {
-		float: none !important;
-		margin: 20px auto !important;
-		display: block;
-	}
-
-	#bigCompanyName {
-		display: block;
-	}
-}
-
-.main-paragraph {
-	font-size: 20px;
-	line-height: 30px;
-	font-family: "Maiden Orange";
-	text-indent: 50px;
-	text-align: justify;
-}
-
-.emoji {
-	font-size: 1rem;
-}
-
-#bigLogo {
-	float: left;
-	margin: 20px 20px 20px 0px;
-	box-shadow: 10px 10px 8px #888888;
-	border-radius: 20px;
-}
-
-#innerContent {
-	flex-direction: column-reverse;
-}
-
-h1 {
-	font-size: 30px;
-	line-height: 40px;
-	font-family: "Raleway";
-}
-
-#bigCompanyName {
-	font-style: italic;
-	color: #f07b3f;
-}
-
-.red {
-	color: #ea5455; 
 }

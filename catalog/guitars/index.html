@@ -1,11 +1,10 @@
 <html>
 	<head>
 		<title> Music shop </title>
-		<link rel="icon" href="images/logo_small.png" type="image/icon type">
 		<link rel="stylesheet" href="styles.css">
+		<link rel="icon" href="../../images/logo_small.png" type="image/icon type">
 		<script type="text/javascript" src="scripts.js"></script>
 		<link href='https://fonts.googleapis.com/css?family=PT Sans' rel='stylesheet'>
-		<link href="https://fonts.googleapis.com/css?family=Maiden+Orange&display=swap" rel="stylesheet">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta charset="UTF-8">
 	</head>
@@ -14,7 +13,7 @@
 		<header class="main-block flexible-container">
 			<div class="content">
 				<div class="flexible-container" id="companyNameDiv">
-					<div id="companyNameLeftDiv"><image id="logoImage" src="images/logo.jpg" alt="there should be the company logotype"/></div>
+					<div id="companyNameLeftDiv"><image id="logoImage" src="../../images/logo.jpg" alt="there should be the company logotype"/></div>
 					<div id="companyNameRightDiv">
 						<div id="companyNameText">Music Pro</div>
 						<div id="companyNameSubText">Найкраща компанія!</div>
@@ -42,17 +41,22 @@
 		</div>
 		<div id="slider" class="main-block">
 			<div id="sliderInnerDiv">
-				<image class="slider-image" src="images/slider/slider1.jpg"></image>
-				<image class="slider-image" src="images/slider/slider2.jpg"></image>
-				<image class="slider-image" src="images/slider/slider3.jpg"></image>
-				<image class="slider-image" src="images/slider/slider4.jpg"></image>
-				<image class="slider-image" src="images/slider/slider5.jpg"></image>
+				<image class="slider-image" src="../../images/slider/slider1.jpg"></image>
+				<image class="slider-image" src="../../images/slider/slider2.jpg"></image>
+				<image class="slider-image" src="../../images/slider/slider3.jpg"></image>
+				<image class="slider-image" src="../../images/slider/slider4.jpg"></image>
+				<image class="slider-image" src="../../images/slider/slider5.jpg"></image>
 			</div>
 		</div>
 		<div id="content" class="main-block">
 			<div class="flexible-container">
 			<div class="content">
-				<div id="innerContent" class="flexible-container">
+				<ul id="locationUl">
+					<li>Головна</li>
+					<li>Каталог</li>
+					<li>Гітари</li>
+				</ul>
+				<div class="flexible-container">
 					<div id="leftBlock">
 						<ul id="leftBlockUl">
 							<span class="upper-catalog selected-catalog">Гітари</span>
@@ -91,22 +95,24 @@
 						</ul>
 					</div>
 					<div id="centerBlock">
-						<h1>Вас вітає компанія <span id="bigCompanyName"><span class="red">M</span>usic <span class="red">P</span>ro</span></h1>
-						<image id="bigLogo" src="images/logo.jpg"></image>
-						<p class="main-paragraph">
+						<div id="productsDiv">
+						</div>
+						<div id="additionalInfoDiv">
+							<div class="additionalInfoSubDiv">
 								Компанія "Music Pro" стала флагманом в сфері продажу музичних інструментів
 								уже через 2 роки після свого створення у 2016-му році. Цього вдалося досягти,
 								завдяки чудовому колективу музикантів, досвід яких подекуди сягає п'ятнадцяти років.
-						</p>
-						<p class="main-paragraph">
-							Наш інтернет-магазин унікальний тим, що ми пропонуємо виключно товари, перевірені
-							професіоналами. На разі ми займаємося продажем різноманітних гітар, барабанів та
-							клавішних інструментів та пропонуємо широкий вибір аксесуарів для них.
-							Висловлюємо велику подяку компанії "Web Developers", яка доклала зусиль для того,
-							щоб інтерфейс для взаємодії з нашими клієнтами був зручним. Будемо дуже вдячні,
-							якщо Ви станете нашим клієнтом. Не варто забувати, що постійним клієнтам
-							надається чимала скидка <span class="emoji">&#128578</span>
-						</p>
+							</div>
+							<div class="additionalInfoSubDiv">
+								Наш інтернет-магазин унікальний тим, що ми пропонуємо виключно товари, перевірені
+								професіоналами. На разі ми займаємося продажем різноманітних гітар, барабанів та
+								клавішних інструментів та пропонуємо широкий вибір аксесуарів для них.
+								Висловлюємо велику подяку компанії "Web Developers", яка доклала зусиль для того,
+								щоб інтерфейс для взаємодії з нашими клієнтами був зручним. Будемо дуже вдячні,
+								якщо Ви станете нашим клієнтом. Не варто забувати, що постійним клієнтам
+								надається чимала скидка :)
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -129,7 +135,7 @@
 					</ul>
 				</div>
 				<div class="footer-div">
-					<div id="developmentLeftDiv"><image id="developmentImage" src="images/development.png"/></div>
+					<div id="developmentLeftDiv"><image id="developmentImage" src="../../images/development.png"/></div>
 					<div id="developmentRightDiv">
 						<span class="footer-link">Розробка сайту</span> -<br>
 						<span>компанія "Web Developers"</span>
