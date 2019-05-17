@@ -35,7 +35,7 @@ header {
 }
 
 #companyNameDiv {
-	width: 350px;
+	max-width: 350px;
 	float: left;
 	margin-top: 20px;
 	margin-bottom: 20px;
@@ -75,6 +75,7 @@ header {
 	margin-top: 20px;
 	margin-bottom: 20px;
 	position: relative;
+	flex-direction: column;
 }
 
 #feedbackText {
@@ -82,8 +83,7 @@ header {
 	cursor: pointer;
 	font-size: 18px;
 	padding: 5px;
-	position: absolute;
-	right: 0px;
+	float: right;
 }
 
 @font-face {
@@ -218,6 +218,8 @@ button:focus {
 	font-size: 25px;
 	font-weight: bolder;
 	color: #fffbc4;
+	text-align: center;
+	line-height: 32px;
 }
 
 .menu-li-div {
@@ -248,6 +250,7 @@ button:focus {
 	margin: auto;
 	display: none;
 	border-radius: 40px;
+	object-fit: cover;
 }
 
 @keyframes fade {
@@ -317,12 +320,13 @@ button:focus {
 
 #leftBlock {
 	width: 25%;
+	min-width: 150px;
 	float: left;
 	margin-right: auto;
 }
 
 #centerBlock {
-	width: 75%;
+	width: 73%;
 	float: right;
 	margin-left: auto;
 }
@@ -332,6 +336,7 @@ button:focus {
 	padding: 10px 0px 10px 0px;
 	font-size: 18px;
 	font-weight: bolder;
+	line-height: 23px;
 }
 
 #leftBlockUl > ul {
@@ -358,6 +363,7 @@ button:focus {
 	font-size: 16px;
 	list-style-type: disc;
 	margin-bottom: 5px;
+	line-height: 20px;
 }
 
 #productsDiv {
@@ -370,7 +376,6 @@ button:focus {
 	height: 100%;
 	display: none;
 	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: repeat(2, 1fr);
 	grid-gap: 20px;
 }
 
@@ -386,7 +391,7 @@ button:focus {
 	background-color: white;
 	margin: 10px;
 	width: auto;
-	height: 187.66px;
+	height: 175px;
 	border: 3px solid #2d4059;
 	position: relative;
 }
@@ -473,11 +478,13 @@ button:focus {
 #additionalInfoDiv {
 	border-top: 2px solid #281910;
 	padding: 10px 10px 40px 10px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 10px;
 }
 
-.additionalInfoSubDiv {
-	width: 50%;
-	float: left;
+.additionalInfoSubDivRight {
+	width: 48%;
 }
 
 #noContentDiv {
@@ -527,4 +534,58 @@ footer {
 #developmentRightDiv {
 	float: left;
 	margin-left: 10px;
+}
+
+@media (max-width: 768px) {
+	.products-page {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 650px) {
+	#menuUl {
+		display: block;
+	}
+
+	#menuUl li {
+		box-shadow: none;
+	}
+
+	#additionalInfoDiv {
+		grid-template-columns: repeat(1, 1fr);
+	}
+}
+
+@media (max-width: 576px) {
+	.products-page {
+		grid-template-columns: repeat(1, 1fr);
+	}
+
+	#companyNameDiv {
+		float: none;
+	}
+
+	#feedbackDiv {
+		float: none;
+	}
+
+	#footerInnerDiv {
+		display: block;
+	}
+
+	.footer-div {
+		float: none;
+	}
+
+	footer {
+		padding-bottom: 20px;
+	}
+
+	#footerMenuUl {
+		padding-left: 0px;
+	}
+
+	.feedbackTextInput {
+		width: 200px;
+	}
 }
