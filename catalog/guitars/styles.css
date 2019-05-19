@@ -1,11 +1,9 @@
 #productsDiv {
-	height: fit-content;
 	margin-bottom: 30px;
 }
 
 .products-page {
 	width: 100%;
-	height: 100%;
 	display: none;
 	grid-template-columns: repeat(3, 1fr);
 	grid-gap: 20px;
@@ -13,7 +11,7 @@
 
 .product-div {
 	background-color: #f07b3f;
-	height: fit-content;
+	height: 300px;
 	position: relative;
 	padding: 10px;
 	border-radius: 10px;
@@ -30,18 +28,19 @@
 
 .product-image {
 	max-width: 100%;
-	max-height: 100%;
-	min-height: 100%;
+	max-height: calc(100% - 2px);
+	min-height: calc(100% - 2px);
 	object-fit: contain;
+	display: block;
+	margin: auto;
 }
 
 .product-image-inner-div {
-	width: fit-content;
-	height: fit-content;
 	position: relative;
 	top: 50%;
 	transform: translateY(-50%);
 	margin: auto;
+	height: inherit;
 }
 
 .product-brief {

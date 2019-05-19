@@ -70,7 +70,7 @@ header {
 }
 
 #feedbackDiv {
-	width: fit-content;
+	width: auto;
 	float: right;
 	margin-top: 20px;
 	margin-bottom: 20px;
@@ -117,6 +117,7 @@ header {
 	display: table;
 	background-color: #fffbc4;
 	overflow-y: auto;
+	overflow-x: hidden;
 }
 
 #feedbackInnerWraper {
@@ -362,12 +363,12 @@ button:focus {
 	margin-bottom: 10px;
 	display: block;
 	cursor: pointer;
-	width: fit-content;
+	width: auto;
 }
 
 .sub-catalog {
 	cursor: pointer;
-	width: fit-content;
+	width: auto;
 }
 
 .selected-catalog {

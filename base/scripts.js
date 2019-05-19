@@ -60,6 +60,7 @@ function openFeedback() {
 	var feedback = document.getElementById("feedback");
 	feedback.classList.add("unfade-feedback");
 	feedback.style.display = "block";
+	feedbackForm.style.display = "table";
 	onWindowResize();
 }
 
