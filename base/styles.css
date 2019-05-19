@@ -24,6 +24,7 @@ body {
 	padding-left: 10px;
 	padding-right: 10px;
 	margin: auto;
+	overflow-x: auto;
 }
 
 .flexible-container {
@@ -206,10 +207,9 @@ button:focus {
 
 #menuUl {
 	display: flex;
-	justify-content: center;
 	list-style: none;
-	margin: 0px;
-	width: auto;
+	margin: 0px auto;
+	width: max-content;
 }
 
 #menuUl li {
@@ -464,7 +464,7 @@ footer {
 	}
 }
 
-@media (max-width: 650px) {
+@media (max-width: 750px) {
 	#menuUl {
 		display: block;
 	}
@@ -472,7 +472,9 @@ footer {
 	#menuUl li {
 		box-shadow: none;
 	}
+}
 
+@media (max-width: 650px) {
 	#additionalInfoDiv {
 		grid-template-columns: repeat(1, 1fr);
 	}
