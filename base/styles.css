@@ -250,7 +250,6 @@ button:focus {
 
 #sliderInnerDiv {
 	width: 100%;
-	margin: 10px 0px;
 }
 
 .slider-image {
@@ -258,7 +257,6 @@ button:focus {
 	height: 200px;
 	margin: auto;
 	display: none;
-	border-radius: 40px;
 	object-fit: cover;
 }
 
